@@ -1,7 +1,8 @@
 # In Class "Lab" - Intro to R and Functions
 # Data 2041
 
-
+# install.packages("stringr")
+library(stringr)
 # This is an R script. 
 # Sometimes you don't need a full report, so you don't need a .Rmd
 # Put your answers in this .R file, name it InClassDay5_Yourlastname.R and
@@ -19,7 +20,7 @@ my_name <- 'Mekayla'
 num_pets <- 1
 
 # Assign the title of your favorite book as a variable called `favorite_book`
-favorite_book <- "dont_let_her_stay"
+favorite_book <- "dont let her stay"
 
 # Create a variable called `radius`, which is your favorite number
 radius <- 20
@@ -49,31 +50,46 @@ too_big
 
 ### PART TWO ###
 
+
 # Create a variable `name_length` that holds how many letters (including spaces)
 # are in your name, using the variable you made above. (use the `nchar()` function)
+name_length = nchar(my_name, type = "chars")
 
 # Print the number of letters in your name
+7L
 
 # Create a variable `now_doing` that is your name followed by "is programming!" 
 # (use the `paste()` function)
+now_doing = paste(my_name, "is programming!", sep = " ")
 
 # Make the `now_doing` variable upper case
+now_doing_1 = str_to_upper(now_doing)
 
 # Pick two of your favorite numbers (between 1 and 100) and assign them to 
 # variables `fav_1` and `fav_2`
+fav_1 = 22
+fav_2 = 56
 
 # Divide each number by the square root of 201 and save the new value in the
 # original variable
+fav_1 = fav_1 / sqrt(201)
+fav_2 = fav_2 / sqrt(201)
 
 # Create a variable `raw_sum` that is the sum of the two variables. Use the 
 # `sum()` function for practice.
+raw_sum = sum(fav_1 + fav_2)
 
 # Create a variable `round_sum` that is the `raw_sum` rounded to 2 decimal places.
 # Use the `round()` function.
+round_sum = round(raw_sum, digits = 2)
 
 # Create two new variables `round_1` and `round_2` that are your `fav_1` and 
 # `fav_2` variables rounded to 2 decimal places
+round_1 = round(fav_1, digits = 2)
+round_2 = round(fav_2, digits = 2)
 
 # Create a variable `sum_round` that is the sum of the rounded values
+sum_round = sum(round_1, round_2)
 
 # Print out both variables and compare. Are they the same?
+yes
